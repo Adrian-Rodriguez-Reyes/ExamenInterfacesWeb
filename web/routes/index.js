@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 var datos = require("../data/dataprovider");
-const {getPostById} = require("../data/dataprovider");
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'RetroBlog', categorias: datos.getCategories(), imagenes: datos.getAllPosts() });
