@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <%- include('partials/head')%>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
+  <header>
+   <%- include('partials/header') %>
+  </header>
+  <nav class="menu">
+    <ul>
+      <% categorias.forEach(categoria => {%>
+        <li><a href="/"><%= categoria %></a></li>
+      <% }); %>
+    </ul>
+  </nav>
+
+  <h2>Ultimas entradas del blog</h2>
+
+  <div class="galeria">
+    <% imagenes.forEach(imagen => {%>
+      <figure>
+        <a href="/pelicula/<%= imagen.id %>">
+        <img src="<%= imagen.thumbnail %>" alt="">
+        <figcaption><%= imagen.title %></figcaption>
+        </a>
+      </figure>
+    <%});%>
+  </div>
+
   </body>
+
+  <footer>
+    <%- include('partials/footer') %>
+  </footer>
 </html>

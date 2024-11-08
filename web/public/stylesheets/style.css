@@ -1,8 +1,42 @@
+@import url("nav.css");
+@import url("thumbnail.css");
+@import url("footer.css");
+@import url("entrada.css");
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin:0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  background-image: url("https://images.pexels.com/photos/8885140/pexels-photo-8885140.jpeg");
+  max-height: 12rem;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2rem;
+  color: white;
+  flex-direction: column;
+  h1{
+    padding-top: 10px;
+    margin-top: 10px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    font-size: 3rem;
+  }
+  p{
+    margin-top:1px;
+    padding-top: 1px;
+    font-size: 2rem;
+  }
 }
 
 a {
   color: #00B7FF;
+}
+
+h2{
+  margin-top: 5rem;
+  padding-top: 10px;
+  text-align: center;
 }
